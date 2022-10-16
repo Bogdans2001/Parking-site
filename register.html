@@ -5,33 +5,78 @@
         <title>Creare cont</title>
         <link rel="stylesheet" href="style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/6f0d43d3cc.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <section class="container forms">
             <div class="form login">
                 <div class="form-content">
-                    <header>Conecteaza-te</header>
+                    <header>Conectează-te</header>
                     <form action="#">
                         <div class="field input-field">
+                            <i class="fas fa-envelope"></i>
                             <input type="email" placeholder="Email" class="input">
                         </div>
                         <div class="field input-field">
-                            <input type="password" placeholder="Parola" class="password">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Parolă" class="password">
                             <i class='bx bx-hide eye-icon' ></i>
                         </div>
                         <div class="form-link">
                             <a href="#" class="forgot-pass">Ai uitat parola?</a>
                         </div>
                         <div class="field button-field">
-                            <button>Conecteaza-te</button>
+                            <button>Conectează-te</button>
                         </div>
                         <div class="form-link">
-                            <span> Ai deja un cont? <a href="#" class="signup-link">Inregistreaza-te</a></span>
+                            <span> Nu ai cont? <a href="#" class="link signup-link">Înregistrează-te</a></span>
+                        </div>
                     </form>
                 </div>
                 <div class="line"></div>
+                <div class="adminLink">
+                    <span><a href="#" class="admin-link">Conectează-te ca reprezentant al unui oraș</a></span>
+                </div>
             </div>
+            <div class="form signup">
+                <div class="form-content">
+                    <header>Înregistrează-te</header>
+                    <form action="#">
+                        <div class="field input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="email" placeholder="Nume" class="input">
+                        </div>
+                        <div class="field input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Email" class="input">
+                        </div>
+                        <div class="field input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Parolă" class="password">
+                            <i class='bx bx-hide eye-icon' ></i>
+                        </div>
+                        <div class="field input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Confirmă parola" class="password">
+                            <i class='bx bx-hide eye-icon' ></i>
+                        </div>
+                        <div class="signupButton-field">
+                            <button>Înregistrează-te</button>
+                        </div>
+                        <div class="signupForm-link">
+                            <span> Ai deja un cont? <a href="#" class="link login-link">Conectează-te</a></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="line"></div>
+                <div class="adminLink">
+                    <span><a href="#" class="admin-link">Conectează-te ca reprezentant al unui oraș</a></span>
+                </div>
+            </div>
+            </section>
         </section>
+
+        <script src="register.js"></script>
     </body>
 </html>
