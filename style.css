@@ -10,14 +10,14 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #2F6DBF;
+    justify-content: space-evenly;
+    background-image: url("parking_fundal.jpeg");
+    background-size: 100%;
 }
 .form{
     max-width: 430px;
     width: 100%;
     padding: 30px;
-
     border-radius: 6px;
     background: #FFF;
 
@@ -58,6 +58,9 @@ form{
 .field input:focus{
     border-bottom-width: 2px;
 }
+.field input:hover{
+    background-color: #f0f0f0;
+}
 
 .field button{
     color: #FFF;
@@ -71,19 +74,30 @@ form{
 .eye-icon{
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 0px;
     transform: translateY(-50%);
     font-size: 18px;
     color:#8b8b8b;
     cursor: pointer;
-    padding: 5px;
+    padding-left: 5px;
+    padding-right: 0px;
+}
+.line{
+    position:relative;
+    height: 1px;
+    width: 100%;
+    margin: 15px 0;
+    background-color: #8b8b8b;
 }
 .form-link{
+
     text-align: center;
-    margin-top: 10px;
+    margin-top: 12px;
 
 }
-
+.adminLink{
+    text-align: center;
+}
 a {
     text-decoration: none;
 }
