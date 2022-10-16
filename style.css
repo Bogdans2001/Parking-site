@@ -15,12 +15,25 @@
     background-size: 100%;
 }
 .form{
+    position: absolute;
     max-width: 430px;
     width: 100%;
     padding: 30px;
     border-radius: 6px;
     background: #FFF;
 
+}
+.form.signup{
+    opacity: 0;
+    pointer-events: none;
+}
+.forms.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+}
+.forms.show-signup .form.login{
+    opacity: 0;
+    pointer-events: none;
 }
 header{
     font-size: 28px;
@@ -43,13 +56,13 @@ form{
 .field input,
 .field button{
     height: 100%;
-    width: 100%;
     border: none;
     font-size: 16px;
     font-weight: 400;
     border-radius: 6px;
 }
 .field input{
+    width: 90%;
     outline: none;
     padding-left:15px;
     border: 1px solid #CACACA;
@@ -62,7 +75,13 @@ form{
     background-color: #f0f0f0;
 }
 
+.fas{
+    justify-content: flex-start;
+    color:  #5f6a6a ;
+}
+
 .field button{
+    width: 100%;
     color: #FFF;
     background-color: #2F6DBF;
     transition: all 0.3 ease;
@@ -70,6 +89,27 @@ form{
 }
 .field button:hover{
     background-color: #074378;
+}
+
+.form .signupButton-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    border-radius: 6px;
+}
+.signupButton-field button{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+    color: #FFF;
+    background-color: #2F6DBF;
+    transition: all 0.3 ease;
+    cursor:pointer;
 }
 .eye-icon{
     position: absolute;
@@ -79,8 +119,8 @@ form{
     font-size: 18px;
     color:#8b8b8b;
     cursor: pointer;
-    padding-left: 5px;
-    padding-right: 0px;
+    padding-left: 0px;
+    padding-right: 25px;
 }
 .line{
     position:relative;
@@ -90,9 +130,13 @@ form{
     background-color: #8b8b8b;
 }
 .form-link{
-
     text-align: center;
     margin-top: 12px;
+
+}
+.signupForm-link{
+    text-align: center;
+    margin-top: 30px;
 
 }
 .adminLink{
@@ -109,3 +153,8 @@ a:hover {
     text-decoration: underline;
 }
 
+@media screen and (max-width: 400px) {
+    .form{
+        padding: 15px 10px;
+    }
+}
