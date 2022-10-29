@@ -42,27 +42,27 @@
             <div class="form signup">
                 <div class="form-content">
                     <header>Înregistrează-te</header>
-                    <form action="#">
+                    <form action="connection.php" method="post">
                         <div class="field input-field">
                             <i class="fas fa-user"></i>
-                            <input type="email" placeholder="Nume" class="input">
+                            <input type="text" placeholder="Nume" class="input" name="username"/>
                         </div>
                         <div class="field input-field">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="email" placeholder="Email" class="input" name="email"/>
                         </div>
                         <div class="field input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Parolă" class="password">
+                            <input type="password" placeholder="Parolă" class="password" name="password"/>
                             <i class='bx bx-hide eye-icon' ></i>
                         </div>
                         <div class="field input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Confirmă parola" class="password">
+                            <input type="password" placeholder="Confirmă parola" class="password" name="confirmPassword"/>
                             <i class='bx bx-hide eye-icon' ></i>
                         </div>
                         <div class="signupButton-field">
-                            <button>Înregistrează-te</button>
+                            <button type="submit">Înregistrează-te</button>
                         </div>
                         <div class="signupForm-link">
                             <span> Ai deja un cont? <a href="#" class="link login-link">Conectează-te</a></span>
