@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-image: url("parking_fundal.jpeg");
+    background-image: url("../images/parking_fundal.jpeg");
     background-size: 100%;
 }
 .form{
