@@ -1,6 +1,6 @@
 <?php
   $username = $_POST['username'];
-  $email = $_POST['email'];;
+  $email = $_POST['email'];
   $password=$_POST['password'];
   $confirmPassword=$_POST['confirmPassword'];
  $connection=new mysqli('127.0.0.2:3307','root','','site_database');

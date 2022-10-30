@@ -13,21 +13,21 @@
             <div class="form login">
                 <div class="form-content">
                     <header>Conectează-te</header>
-                    <form action="#">
+                    <form action="login.php" method="post">
                         <div class="field input-field">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="email" placeholder="Email" class="input" name="email">
                         </div>
                         <div class="field input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Parolă" class="password">
+                            <input type="password" placeholder="Parolă" class="password" name="password">
                             <i class='bx bx-hide eye-icon' ></i>
                         </div>
                         <div class="form-link">
                             <a href="#" class="forgot-pass">Ai uitat parola?</a>
                         </div>
                         <div class="field button-field">
-                            <button>Conectează-te</button>
+                            <button type="submit">Conectează-te</button>
                         </div>
                         <div class="form-link">
                             <span> Nu ai cont? <a href="#" class="link signup-link">Înregistrează-te</a></span>
