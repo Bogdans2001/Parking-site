@@ -5,10 +5,7 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-.active{
-    text-decoration: none;
-    color: #fff;
-}
+
 .plata{
     text-decoration: none;
     color: #fff;
@@ -21,6 +18,22 @@
     text-decoration: none;
     color: #fff;
 }
+.functionsUsername{
+    position:absolute;
+    margin-left:0px;
+    padding-left:0px!important;
+}
+.active{
+    display:none;
+    text-decoration: none;
+    color: #fff;
+}
+.activelogout{
+    display:none;
+    text-decoration: none;
+    color: #fff;
+}
+
 ul{
     list-style: none;
 }
@@ -46,23 +59,29 @@ li{
 }
 
 .header .nav-bar .menu ul li a.active{
-    margin-right: 100px;   
+    margin:10px;
+    margin-right: 0px!important;   
 }
 .header .nav-bar .menu ul li a.plata{
+    margin:10px;
     margin-right: 100px;   
 }
 .header .nav-bar .menu ul li a.rating{
+    margin:10px;
     margin-right: 100px;   
 }
 .header .nav-bar .menu ul li a.nota{
-    margin-right: 0px!important; 
+    margin:10px;
+    margin-right: 100px!important; 
+}
+.header .nav-bar .menu ul li .functionsUsername{
+    margin: 0px;
 }
 .header .nav-bar .menu ul li{
     font-size: 19px;
     letter-spacing: 2px;
-    padding: 10px;
+    padding: 0px;
     border-radius: 5px;
-    text-transform: capitalize;
     transition: all 0.5%;
 }
 
@@ -134,4 +153,10 @@ a:link, a:visited {
 a, a:hover{
     text-decoration: underline;
     color: #fff
+}
+.fas{
+    color: #fff;
+    font-size: 15px;
+    margin-right: 0px!important;
+    margin-left:10px;
 }

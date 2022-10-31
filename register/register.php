@@ -1,9 +1,18 @@
+<?php require("login.php") ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset = "UTF-8">
-        <title>Creare cont</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Autentificare</title>
+        <link rel="stylesheet" href="style.css"/>
+        <?php
+        if($email_error != null){
+            ?> <style>.errorEmailLogin{display: block} </style> <?php
+        }
+        if($password_error != null){
+            ?> <style>.errorPasswordLogin{display: block} </style> <?php
+        }
+        ?>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script src="https://kit.fontawesome.com/6f0d43d3cc.js" crossorigin="anonymous"></script>
     </head>
@@ -13,21 +22,31 @@
             <div class="form login">
                 <div class="form-content">
                     <header>Conectează-te</header>
-                    <form action="login.php" method="post">
+                    <form action="" method="post" autocomplete="off">
                         <div class="field input-field">
-                            <i class="fas fa-envelope"></i>
-                            <input type="email" placeholder="Email" class="input" name="email">
+                            <i class="fas fa-envelope"></i>  
+                            <input type="email" placeholder="Email" class="email" name="email" 
+                            value="<?php if (isset($_SESSION['email']))
+                            echo $_SESSION['email'];
+                            else echo $email; ?>">
+                            <p class="errorEmailLogin"><?php echo $email_error; ?>
+                        </p>
                         </div>
                         <div class="field input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Parolă" class="password" name="password">
+                            <input type="password" placeholder="Parolă" class="password" name="password"
+                            value="<?php if (isset($_SESSION['password']))
+                            echo $_SESSION['password'];
+                            else echo $password; ?>">
                             <i class='bx bx-hide eye-icon' ></i>
+                            <p class="errorPasswordLogin">
+                            <?php echo $password_error; ?></p>
                         </div>
                         <div class="form-link">
                             <a href="#" class="forgot-pass">Ai uitat parola?</a>
                         </div>
                         <div class="field button-field">
-                            <button type="submit">Conectează-te</button>
+                            <button type="submit" name="loginButton">Conectează-te</button>
                         </div>
                         <div class="form-link">
                             <span> Nu ai cont? <a href="#" class="link signup-link">Înregistrează-te</a></span>
