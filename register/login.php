@@ -27,7 +27,9 @@ $_SESSION['last_login']=time();
     $result=$stmt->get_result();
   if(mysqli_num_rows($result)===1){
             $row=mysqli_fetch_assoc($result);
+            $id=$row['id'];
             $username=$row['username'];
+            $_SESSION['id']=$id;
             $_SESSION['username']=$username;
             $_SESSION['email']=$email;
             $_SESSION['password']=$password;
