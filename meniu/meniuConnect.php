@@ -1,12 +1,23 @@
 <!DOCTYPE html>
+<?php
+  session_start();
+  $time=time()-$_SESSION['last_login'];
+  if($time>900)  {
+    $_SESSION['inactivitate']=1;
+    header("Location:../register/logout.php");
+  }
+  else $_SESSION['last_login']=time();
+?>
 <html>
     <head>
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
         <title>Meniu</title>
         <meta content="" name="description"/>
-        <meta content="" name=""keywords/>
-        <link rel="stylesheet" type="text/css" href="meniuStyle.css"/>
+        <meta content="" name="keywords"/>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/6f0d43d3cc.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="connectStyle.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
@@ -16,10 +27,18 @@
         <div class="nav-bar">
             <div class="menu">
                 <ul>
-                    <li><a href="../register/register.html" class="active">Conectează-te</a></li>
                     <li><a href="#" class="plata">Plătește</a></li>
                     <li><a href="#" class="rating">Istoricul meu</a></li>
                     <li><a href="#" class="nota">Notează parcarea</a></li>
+                    <li><i class="fas fa-user"></i></li>
+                    <li><div class="username">
+                        <button class="textUsername" id="username"><?php echo $_SESSION['username'];?></button>
+                        <p class="functionsUsername" id="links">
+                            <a href="" class="active" id="deconectare">Deconectare</a>
+                            <br>
+                            <a href="#" class="activelogout" id="stergere">Șterge contul</a>
+                        </p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -53,5 +72,6 @@
             })
         });
     </script>
+    <script src="meniuConnect.js"></script>
 </body>    
 </html>
