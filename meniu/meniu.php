@@ -20,9 +20,9 @@
             <div class="menu">
                 <ul>
                     <li><a href="../register/register.php" class="active">Conectează-te</a></li>
-                    <li><a href="#" class="plata">Plătește</a></li>
-                    <li><a href="#" class="rating">Istoricul meu</a></li>
-                    <li><a href="#" class="nota">Notează parcarea</a></li>
+                    <li><a href="#" class="plata" id="plata">Plătește</a></li>
+                    <li><a href="#" class="rating" id="rating">Istoricul meu</a></li>
+                    <li><a href="#" class="nota" id="nota">Notează parcarea</a></li>
                 </ul>
             </div>
         </div>
@@ -56,5 +56,6 @@
             })
         });
     </script>
+    <script src="meniu.js"></script>
 </body>    
 </html>
