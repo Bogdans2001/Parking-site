@@ -10,7 +10,7 @@ $_SESSION['last_login']=time();
  if($connection->connect_error){
   die("Connection failed :" .$connection->connect_error);
  }
- else
+ else{
   if(isset($_POST['loginButton'])){
   $email = $_POST['email'];
   $password = $_POST['password'];
@@ -21,11 +21,12 @@ $_SESSION['last_login']=time();
     $password_error = "Introduceți parola";
   }
   else {
-  $query="SELECT * FROM user_account WHERE email='$email' AND password='$password' limit 1";
-  $result=mysqli_query($connection, $query);
+    $stmt=$connection->prepare("SELECT * FROM user_account WHERE email=? AND password=? limit 1");
+    $stmt->bind_param("ss",$email,$password);
+    $stmt->execute();
+    $result=$stmt->get_result();
   if(mysqli_num_rows($result)===1){
             $row=mysqli_fetch_assoc($result);
-            session_start();
             $username=$row['username'];
             $_SESSION['username']=$username;
             $_SESSION['email']=$email;
@@ -33,6 +34,7 @@ $_SESSION['last_login']=time();
             header("Location:../meniu/meniuConnect.php");
   }
   else $password_error = "Adresa de email sau parola invalidă";
+  $stmt->close();
 }
- }
+ }}
 ?>

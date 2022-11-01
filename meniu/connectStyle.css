@@ -22,14 +22,32 @@
     position:absolute;
     margin-left:0px;
     padding-left:0px!important;
+    display:none;
+}
+.textUsername{
+    background-color: rgb(17, 17, 119);
+    color:#fff;
+    border:none;
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+.textUsername:hover{
+    border:3px;
+    background-color: rgb(38, 38, 132);
 }
 .active{
-    display:none;
+    padding-left:0px;
+    font-size: 14px;
+    display:block;
+    margin: 0px;
     text-decoration: none;
     color: #fff;
 }
 .activelogout{
-    display:none;
+    padding-left:10px;
+    font-size:14px;
+    margin:0px;
+    display:block;
     text-decoration: none;
     color: #fff;
 }
@@ -160,3 +178,9 @@ a, a:hover{
     margin-right: 0px!important;
     margin-left:10px;
 }
+br {
+    display: block;
+    margin-bottom: 2px;
+    font-size:2px;
+    line-height: 2px;
+  }

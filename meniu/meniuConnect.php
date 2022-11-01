@@ -32,14 +32,13 @@
                     <li><a href="#" class="nota">Notează parcarea</a></li>
                     <li><i class="fas fa-user"></i></li>
                     <li><div class="username">
-                        <p class="textUsername"><?php echo $_SESSION['username'];?></p>
-                        <p class="functionsUsername">
-                            <a href="../register/logout.php" class="active">Deconectare</a>
+                        <button class="textUsername" id="username"><?php echo $_SESSION['username'];?></button>
+                        <p class="functionsUsername" id="links">
+                            <a href="" class="active" id="deconectare">Deconectare</a>
                             <br>
-                            <a href="#" class="activelogout">Șterge contul</a>
+                            <a href="#" class="activelogout" id="stergere">Șterge contul</a>
                         </p>
                     </li>
-                    <li><a href="../register/logout.php" class="active">Deconectare</a></li>
                 </ul>
             </div>
         </div>
@@ -73,5 +72,6 @@
             })
         });
     </script>
+    <script src="meniuConnect.js"></script>
 </body>    
 </html>
