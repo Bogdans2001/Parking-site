@@ -7,7 +7,7 @@
  require ('C:\xampp\htdocs\Parking_site\PHPMailer\PHPMailer-master\src\Exception.php');
  require ('C:\xampp\htdocs\Parking_site\PHPMailer\PHPMailer-master\src\PHPMailer.php');
  require ('C:\xampp\htdocs\Parking_site\PHPMailer\PHPMailer-master\src\SMTP.php');
- function send_password_reset(){
+ function send_password_reset($string,$get_email){
     $mail=new PHPMailer(true);                     //Enable verbose debug output
     $mail->isSMTP();
     $mail->SMTPAuth=true;                                            //Send using SMTP
@@ -18,13 +18,14 @@
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $get_email="stoinelb@gmail.com";
     $mail->setFrom('stoinelb@gmail.com', $get_email);
     $mail->addAddress($get_email);
     $mail->isHTML(true);
     $mail->Subject="Resetare parola";
     $email_template="
-    Salut!
+      Codul dumneavoastră este '$string'.
+      Pentru a reseta parola, accesați următorul link: 
+      <br><a href='http://localhost/Parking_site/register/updatePassword.php'>Resetare</a>
     ";
     $mail->Body=$email_template;
     $mail->send();
@@ -93,6 +94,11 @@
    </script>";
             $stmt->close();
   }else{
+   $row=mysqli_fetch_assoc($result);
+   session_start();
+   $_SESSION['id']=$row['id'];
+   $_SESSION['password']=$password;
+   $_SESSION['token']=$row['token'];
    echo "<script>
    var eroare=document.getElementById('eroare');
    var text=document.createTextNode('Linkul a fost trimis');
@@ -100,7 +106,14 @@
    eroare.style.display='block';
    eroare.style.color='green';
    </script>";
-   send_password_reset();
+   $string_ch='0123456789';
+   $length=6;
+   $string='';
+   while(strlen($string)<$length){
+    $string.=$string_ch[random_int(0,strlen($string_ch))];
+   }
+   $_SESSION['cod']=$string;
+   send_password_reset($string,$email);
   $connection->close();
   }}}
 ?>
