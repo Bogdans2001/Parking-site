@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <form action="" method="post">
-        <input type="text" placeholder="Nume oras">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Parola">
-        <input type="confirmPassword" placeholder="Confirma parola">
-        <input type="file">
-        <button type="submit">Inregistreaza-te</button>
+        <form action="register.php" method="post" enctype="multipart/form-data">
+        <input type="text" placeholder="Nume oraș" name="username" id="username">
+        <input type="email" placeholder="Email" name="email" id="email">
+        <input type="password" placeholder="Parolă" name="password">
+        <input type="password" placeholder="Confirmă parola" name="confirmPassword">
+        <input type="file" name="file">
+        <button type="submit" name="button">Inregistreaza-te</button>
+        <p class="eroare" id="eroare"></p>
         </form>
     </body>
 </html>
