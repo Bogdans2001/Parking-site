@@ -50,7 +50,7 @@
                             <?php echo $password_error; ?></p>
                         </div>
                         <div class="form-link">
-                            <a href="#" class="forgot-pass">Ai uitat parola?</a>
+                            <a href="../register/forgotPassword.php" class="forgot-pass">Ai uitat parola?</a>
                         </div>
                         <div class="field button-field">
                             <button type="submit" name="loginButton">Conectează-te</button>

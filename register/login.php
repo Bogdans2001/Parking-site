@@ -1,5 +1,7 @@
 <?php
 session_start();
+session_destroy();
+session_start();
 $_SESSION['last_login']=time();
   $email_error = null;
   $password_error=null;
