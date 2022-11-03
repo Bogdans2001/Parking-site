@@ -58,6 +58,7 @@ function send_password_reset($email,$id){
     */
  }
  if(isset($_POST['button'])) {
+        $_SESSION['last_register']=time();
         $email=$_POST['email'];
         $password=$_POST['password'];
         $username=$_POST['username'];
