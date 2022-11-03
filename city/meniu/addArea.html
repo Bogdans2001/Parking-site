@@ -3,8 +3,8 @@
 <html>
     <head>
         <meta charset = "UTF-8">
-        <title>Autentificare</title>
-        <link rel="stylesheet" href="accept.css"/>
+        <title>Adaugă zonă</title>
+        <link rel="stylesheet" href="addArea.css"/>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script src="https://kit.fontawesome.com/6f0d43d3cc.js" crossorigin="anonymous"></script>
     </head>
@@ -13,23 +13,21 @@
         <section class="container forms">
             <div class="form signup">
                 <div class="form-content">
-                    <header>Aprobare cerere</header>
+                    <header>Adaugă zonă</header>
                     <form action="" method="post" autocomplete="off">
                         <div class="field input-field">
-                            <input type="text" placeholder="Introduceți id-ul" class="password" name="cod"/>
+                            <input type="number" min="0" max="100" placeholder="Introduceți numărul zonei" class="zona" name="zona"/>
                         </div>
                         <div class="field input-field">
-                            <input type="text" placeholder="Introduceți adresa de email" class="password" name="email"/>
-                            <p class="errorRegister" id="eroareCod"></p>
+                            <input type="number" min="1" max="100" placeholder="Introduceți prețul" class="pret" name="pret"/>
+                            <p class="errorRegister" id="eroare"></p>
                         </div>
                         <div class="signupButton-field">
-                            <button type="submit" name="button">Aprobați</button>
+                            <button type="submit" name="button">Adaugă zonă</button>
                         </div>
                     </form>
             </div>
             </section>
         </section>
-
-        <script src="javascript.js"></script>
     </body>
 </html>
