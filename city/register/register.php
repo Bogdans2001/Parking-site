@@ -26,7 +26,7 @@ if(isset($_SESSION['username']) || isset($_SESSION['email'])) {
     ";
 }
 ini_set('display_errors',1);
-function send_password_reset($email,$id){
+function send_password_reset($username,$email,$id){
     $mail=new PHPMailer(true);                     //Enable verbose debug output
     $mail->isSMTP();
     $mail->SMTPAuth=true;                                            //Send using SMTP
@@ -43,7 +43,7 @@ function send_password_reset($email,$id){
     $mail->isHTML(true);
     $mail->Subject="Cerere de autentificare";
     $email_template="
-      Utilizatorul '$email' a trimis o cerere de autentificare.
+      Utilizatorul '$email' a trimis o cerere de autentificare pentru orașul '$username'.
       Pentru a aproba cererea, inserați id-ul '$id' în următoarea fereastră:
       <br><a href='http://localhost/Parking_site/city/register/accept.php'>Aprobați</a>
     ";
@@ -132,9 +132,10 @@ function send_password_reset($email,$id){
     $result=$stmt->get_result();
     $row=mysqli_fetch_assoc($result);
     $id=$row['id'];
-    $SESSION['id']=$id;
+    $_SESSION['username']=$username;
+    $_SESSION['id']=$id;
   $connection->close();
- send_password_reset($email,$id);
+ send_password_reset($username,$email,$id);
  echo "<script>alert('Înregistrare reușită!');
   window.location='../register/login.php';    
   </script>";

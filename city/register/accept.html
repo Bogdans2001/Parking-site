@@ -14,12 +14,15 @@
             <div class="form signup">
                 <div class="form-content">
                     <header>Aprobare cerere</header>
-                    <form action="" method="post" autocomplete="off">
+                    <form action="" name="form" method="post" autocomplete="off" onsubmit="validate()">
                         <div class="field input-field">
-                            <input type="text" placeholder="Introduceți id-ul" class="password" name="cod"/>
+                            <input type="text" id="username" placeholder="Introduceți numele orașului" class="password" name="username"/>
                         </div>
                         <div class="field input-field">
-                            <input type="text" placeholder="Introduceți adresa de email" class="password" name="email"/>
+                            <input type="text" id="cod" placeholder="Introduceți id-ul" class="password" name="cod"/>
+                        </div>
+                        <div class="field input-field">
+                            <input type="text" id="email" placeholder="Introduceți adresa de email" class="password" name="email"/>
                             <p class="errorRegister" id="eroareCod"></p>
                         </div>
                         <div class="signupButton-field">
@@ -31,5 +34,6 @@
         </section>
 
         <script src="javascript.js"></script>
+        <script src="accept.js"></script>
     </body>
 </html>

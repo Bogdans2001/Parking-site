@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Plătește parcarea</title>
+        <link rel="stylesheet" href="payment.css"/>
+    </head>
+
+    <body>
+        <section class="container forms">
+            <div class="form signup">
+                <div class="form-content">
+                    <header>Plătește parcarea</header>
+                    <form name="form" action="" method="post" autocomplete="off" onsubmit="return validate()">
+                        <div class="field input-field">
+                            <input type="text" id="inm_number" placeholder="Introduceți numărul de înmatriculare" class="inm_number" name="inm_number"/>
+                        </div>
+                        <div class="field input-field">
+                            <input type="text" id="city" placeholder="Introduceți numele orașului" class="cont" name="city_name"/>
+                        </div>
+                        <div class="field input-field">
+                            <input type="number" min="0" max="100" id="zona" placeholder="Introduceți numărul zonei" class="zona" name="zona" required/>
+                        </div>
+                        <div class="field input-field">
+                            <input type="text" placeholder="Introduceți numărul cardului" class="pret" name="card_number"/>
+                            <p class="errorRegister" id="eroare"></p>
+                        </div>
+                        <div class="signupButton-field">
+                            <button type="submit" name="button">Plătește</button>
+                        </div>
+                    </form>
+            </div>
+            </section>
+            <script src="payment.js"></script>
+        </body>
+</html>

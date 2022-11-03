@@ -1,7 +1,7 @@
 <?php
 include("meniuConnect.html");
   session_start();
-  $username=$_SESSION['username'];
+  $username=$_SESSION['cityName'];
   $time=time()-$_SESSION['last_login'];
   if($time>900)  {
     $_SESSION['inactivitate']=1;

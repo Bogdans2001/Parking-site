@@ -98,7 +98,6 @@
    session_start();
    $_SESSION['id']=$row['id'];
    $_SESSION['password']=$password;
-   $_SESSION['token']=$row['token'];
    echo "<script>
    var eroare=document.getElementById('eroare');
    var text=document.createTextNode('Linkul a fost trimis');
