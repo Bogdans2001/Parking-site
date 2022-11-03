@@ -62,7 +62,7 @@
                 </div>
                 <div class="line"></div>
                 <div class="adminLink">
-                    <span><a href="#" class="admin-link">Conectează-te ca reprezentant al unui oraș</a></span>
+                    <span><a href="../city/register/login.php" class="admin-link">Conectează-te ca reprezentant al unui oraș</a></span>
                 </div>
             </div>
             <div class="form signup">
@@ -101,7 +101,7 @@
                 </div>
                 <div class="line"></div>
                 <div class="adminLink">
-                    <span><a href="#" class="admin-link">Conectează-te ca reprezentant al unui oraș</a></span>
+                    <span><a href="../city/register/login.php" class="admin-link">Conectează-te ca reprezentant al unui oraș</a></span>
                 </div>
             </div>
             </section>

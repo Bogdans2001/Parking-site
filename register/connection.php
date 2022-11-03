@@ -15,6 +15,10 @@
   $emailRegister = $_POST['email'];
   $passwordRegister=$_POST['password'];
   $confirmPassword=$_POST['confirmPassword'];
+  if(empty(trim($usernameRegister))){
+    $error_Register="Introduceți numele";
+  }
+  else
   if(empty(trim($emailRegister))){
     $error_Register="Introduceți adresa de email";
   }

@@ -128,6 +128,9 @@ li{
 .slick-next::before, .slick-prev::before{
     font-size: 20px !important;
 }
+.slick-dots{
+    visibility:hidden;
+ }
 a:link, a:visited {
     color: #fff;
 }

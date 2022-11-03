@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Autentificare</title>
+        <link rel="stylesheet" href="styleRegister.css"/>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/6f0d43d3cc.js" crossorigin="anonymous"></script>
+    </head>
     <body>
-        <form action="" method="post">
-        <input type="text" placeholder="Nume oras">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Parola">
-        <input type="confirmPassword" placeholder="Confirma parola">
-        <input type="file">
-        <button type="submit">Inregistreaza-te</button>
+        <section class="container forms">
+        <div class="form signup">
+            <div class="form-content">
+                <header>Înregistrează-te</header>
+                    <form action="register.php" method="post" enctype="multipart/form-data">
+                        <div class="field input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Nume oraș" class="input" name="username" id="username">
+                        </div>
+                        <div class="field input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Email" class="input" name="email" id="email">
+                        </div>
+                        <div class="field input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" class="password" placeholder="Parolă" name="password">
+                            <i class='bx bx-hide eye-icon' ></i>
+                            <p class="errorConfirmPassword">
+                        </div>
+                        <div class="field input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Confirmă parola" class="password" name="confirmPassword">
+                            <i class='bx bx-hide eye-icon' ></i>
+                            <p class="errorRegister" id="eroare"></p>
+                        </div>
+                        <div class="fileField">
+                            <p class="rasfoire">Încărcați documentul semnat.</p>
+                            <input type="file" name="file" class="email" accept="image/*">
+                            
+                        </div>
+                        <div class="signupButton-field">
+                            <button type="submit" name="button">Înregistreaza-te</button>
+                        </div>
+                        <div class="signupForm-link">
+                            <span> Ai deja un cont? <a href="login.php" class="link login-link">Conectează-te</a></span>
+                        </div>
+                    </form>
+            </div>
+            <div class="line"></div>
+                <div class="adminLink">
+                    <span><a href="../../register/register.php" class="admin-link">Conectează-te ca șofer</a></span>
+                </div>
+            </div>
         </form>
+    </section>
+        <script src="javascript.js"></script>
     </body>
 </html>
+            
