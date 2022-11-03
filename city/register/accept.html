@@ -4,7 +4,7 @@
     <head>
         <meta charset = "UTF-8">
         <title>Autentificare</title>
-        <link rel="stylesheet" href="updatePassword.css"/>
+        <link rel="stylesheet" href="accept.css"/>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script src="https://kit.fontawesome.com/6f0d43d3cc.js" crossorigin="anonymous"></script>
     </head>
@@ -13,13 +13,16 @@
         <section class="container forms">
             <div class="form signup">
                 <div class="form-content">
-                    <header>Recuperează parola</header>
-                    <form action="" method="post" autocomplete="off">
+                    <header>Aprobare cerere</header>
+                    <form action="" name="form" method="post" autocomplete="off" onsubmit="validate()">
                         <div class="field input-field">
-                            <input type="text" placeholder="Introduceți id-ul" class="password" name="cod"/>
+                            <input type="text" id="username" placeholder="Introduceți numele orașului" class="password" name="username"/>
                         </div>
                         <div class="field input-field">
-                            <input type="text" placeholder="Introduceți adresa de email" class="password" name="email"/>
+                            <input type="text" id="cod" placeholder="Introduceți id-ul" class="password" name="cod"/>
+                        </div>
+                        <div class="field input-field">
+                            <input type="text" id="email" placeholder="Introduceți adresa de email" class="password" name="email"/>
                             <p class="errorRegister" id="eroareCod"></p>
                         </div>
                         <div class="signupButton-field">
@@ -31,5 +34,6 @@
         </section>
 
         <script src="javascript.js"></script>
+        <script src="accept.js"></script>
     </body>
 </html>

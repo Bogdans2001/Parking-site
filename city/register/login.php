@@ -43,10 +43,10 @@ session_start();
             $row=mysqli_fetch_assoc($result);
             $id=$row['id'];
             $username=$row['username'];
-            $_SESSION['id']=$id;
-            $_SESSION['username']=$username;
-            $_SESSION['email']=$email;
-            $_SESSION['password']=$password;
+            $_SESSION['idCity']=$id;
+            $_SESSION['cityName']=$username;
+            $_SESSION['emailCity']=$email;
+            $_SESSION['cityPassword']=$password;
             header("Location:../meniu/meniuConnect.php");
   }
   else echo "<script>

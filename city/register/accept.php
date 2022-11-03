@@ -47,6 +47,7 @@ require ('C:\xampp\htdocs\Parking_site\PHPMailer\PHPMailer-master\src\Exception.
    }else if(isset($_POST['button'])){
       $cod=$_POST['cod'];
       $email=$_POST['email'];
+      $username=$_POST['username'];
       if(empty(trim($cod))){
         echo "<script>
         var eroare=document.getElementById('eroareCod');
@@ -63,6 +64,14 @@ require ('C:\xampp\htdocs\Parking_site\PHPMailer\PHPMailer-master\src\Exception.
         eroare.style.display='block';
         </script>";
       }
+      else if(empty(trim($username))){
+        echo "<script>
+        var eroare=document.getElementById('eroareCod');
+        var text=document.createTextNode('Introduceți numele orasului');
+        eroare.appendChild(text);
+        eroare.style.display='block';
+        </script>";
+      }
      else{
         $stmt=$connection->prepare("SELECT * FROM city_account WHERE email=? AND id=? limit 1");
         $stmt->bind_param("ss",$email,$cod);
@@ -71,6 +80,8 @@ require ('C:\xampp\htdocs\Parking_site\PHPMailer\PHPMailer-master\src\Exception.
       if(mysqli_num_rows($result)===1) {
         $stmt->close();
         $ok=1;
+        $query = "CREATE TABLE IF NOT EXISTS ".$username." (id int primary KEY AUTO_INCREMENT, bank_account VARCHAR(100) NULL, zona int NULL, pret int NULL, rating int NULL, suma int NULL, contor int NULL); ";
+        $result=$connection->query($query);
         $stmt=$connection->prepare("UPDATE `city_account` SET `ok`=? WHERE `id`=?");
         $stmt->bind_param("si",$ok,$cod);
         $stmt->execute();

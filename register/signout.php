@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
  session_start();
  $connection=new mysqli('127.0.0.2:3307','root','','site_database');
@@ -16,4 +15,3 @@
     window.location.assign('../meniu/meniu.php');</script>";
     echo $alert;
 ?>
-</html>
