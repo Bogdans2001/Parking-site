@@ -12,6 +12,5 @@ include("meniuConnect.html");
   var button=document.getElementById('username');
   var text=document.createTextNode('$username');
   button.appendChild(text);
-  eroare.style.display='block';
   </script>";
 ?>
