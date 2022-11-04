@@ -5,7 +5,7 @@ function plateste($connection,$getBudget, $getPrice, $getBankAccount, $getCardNu
     if($getBudget<$getPrice) {
         echo "<script>
         var eroare=document.getElementById('eroare');
-        var text=document.createTextNode('Zona inexistentă');
+        var text=document.createTextNode('Fonduri insuficiente');
         eroare.appendChild(text);
         eroare.style.display='block';
         </script>";
@@ -119,8 +119,11 @@ if(mysqli_num_rows($result)!=0){
          plateste($connection,$budget,$price,$bank_account,$card_number,$_SESSION['username'],$city,$zona,$inm_number);
         }
   }
-  else plateste($connection,$budget,$price,$bank_account,$card_number,$_SESSION['username'],$city,$zona,$inm_number);
-}
+  
+  else {
+    plateste($connection,$budget,$price,$bank_account,$card_number,$_SESSION['username'],$city,$zona,$inm_number);
+    echo $_SESSION['username'];
+  }}
 }
 }
 }
