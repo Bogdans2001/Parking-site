@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url("../../images/parking_fundal.jpeg");
+    background-size: 100%;
+}
+.form{
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background: #FFF;
+
+}
+.form.login{
+    opacity: 0;
+    pointer-events: none;
+}
+.forms.show-signup .form.signup{
+    opacity: 0;
+    pointer-events: none;
+}
+.forms.show-signup .form.login{
+    opacity: 1;
+    pointer-events: auto;
+}
+header{
+    font-size: 28px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+}
+form{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.form .field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+.field input,
+.field button{
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+.field input{
+    width: 90%;
+    outline: none;
+    padding-left:15px;
+    margin-bottom: 30px;
+    border: 1px solid #CACACA;
+}
+
+.field input:focus{
+    border-bottom-width: 2px;
+}
+.field input:hover{
+    background-color: #f0f0f0;
+}
+
+.fas{
+    justify-content: flex-start;
+    color:  #5f6a6a ;
+}
+
+.field button{
+    width: 100%;
+    color: #FFF;
+    background-color: #2F6DBF;
+    transition: all 0.3 ease;
+    cursor:pointer;
+}
+.field button:hover{
+    background-color: #074378;
+}
+
+.form .signupButton-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    border-radius: 6px;
+}
+.signupButton-field button{
+    margin-bottom: 20px;
+    margin-top: 30px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+    color: #FFF;
+    background-color: #2F6DBF;
+    transition: all 0.3 ease;
+    cursor:pointer;
+}
+.eye-icon{
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color:#8b8b8b;
+    cursor: pointer;
+    padding-left: 0px;
+    padding-right: 25px;
+}
+.line{
+    position:relative;
+    height: 1px;
+    width: 100%;
+    margin: 15px 0;
+    background-color: #8b8b8b;
+}
+.form-link{
+    text-align: center;
+    margin-top: 12px;
+
+}
+.signupForm-link{
+    text-align: center;
+    margin-top: 30px;
+
+}
+.forgot-password{
+    margin-top:10px;
+}
+.adminLink{
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: #0a63d8;
+}
+a:hover {
+    color: #042f66;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 400px) {
+    .form{
+        padding: 15px 10px;
+    }
+}
+
+.errorEmailLogin{
+    display: none;
+    color: #da0606;
+    background-color: #fff;
+    padding-left: 20px;
+    transform: translateY(-40px);
+    margin-bottom: 20px;
+    font-size:14px;
+    border:#042f66;
+}
+.errorPasswordLogin{
+    display: none;
+    color: #da0606;
+    background-color: #fff;
+    padding-left: 20px;
+    transform: translateY(-40px);
+    margin-bottom: 20px;
+    font-size:14px;
+    border:#042f66;
+}
+.errorConfirmPassword{
+    display: none;
+    color: #da0606;
+    background-color: #fff;
+    padding-left: 20px;
+    transform: translateY(-40px);
+    margin-bottom: 20px;
+    font-size:14px;
+    border:#042f66;
+}
+.errorRegister{
+    display: none;
+    color: #da0606;
+    background-color: #fff;
+    padding-left: 20px;
+    transform: translateY(-40px);
+    margin-bottom: 20px;
+    font-size:14px;
+    border:#042f66;
+}
