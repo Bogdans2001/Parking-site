@@ -28,8 +28,8 @@
             <div class="menu">
                 <ul>
                     <li><a href="../payment/payment.php" class="plata" id="plata">Plătește</a></li>
-                    <li><a href="#" class="rating" id="rating">Istoricul meu</a></li>
-                    <li><a href="#" class="nota" id="nota">Notează parcarea</a></li>
+                    <li><a href="../istoric/istoric.php" class="rating" id="rating">Istoricul meu</a></li>
+                    <li><a href="../rating/rating.php" class="nota" id="nota">Notează parcarea</a></li>
                     <li><i class="fas fa-user"></i></li>
                     <li><div class="username">
                         <button class="textUsername" id="username"><?php echo $_SESSION['username'];?></button>
