@@ -20,8 +20,12 @@
             if($connection->connect_error){
              die("Connection failed :" .$connection->connect_error);
             }
-            $query="SELECT nr_inmatriculare, oras, zona, data FROM payment";
-            $result=$connection->query($query);
+            session_start();
+            $query="SELECT nr_inmatriculare, oras, zona, data FROM payment WHERE username=?";
+            $stmt=$connection->prepare($query);
+            $stmt->bind_param("s",$_SESSION['username']);
+            $stmt->execute();
+            $result=$stmt->get_result();
             if($result-> num_rows > 0){
                 while($row = $result->fetch_assoc()){
                     echo "<tr><td>".$row['nr_inmatriculare']."</td><td>".$row['oras']."</td><td>".$row['zona']."</td><td>".$row['data']."</td></tr>";
