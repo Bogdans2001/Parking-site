@@ -12,9 +12,9 @@ element.style.display="none";
 })
 active.addEventListener("click",e=>{
     e.preventDefault();
-    if(confirm("Vreți să vă deconectați?")) window.location="../register/logout.php";
+    if(confirm("Vreți să vă deconectați?")) window.location="../logout/logout.php";
 })
 signout.addEventListener("click",e=>{
     e.preventDefault();
-    if(confirm("Vreți să ștergeți contul?")) window.location="../register/signout.php";
+    if(confirm("Vreți să ștergeți contul?")) window.location="../logout/signout.php";
 })

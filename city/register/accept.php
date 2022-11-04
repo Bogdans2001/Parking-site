@@ -21,7 +21,7 @@ require ('C:\xampp\htdocs\Parking_site\PHPMailer\PHPMailer-master\src\Exception.
     $mail->setFrom('stoinelb@gmail.com', $get_email);
     $mail->addAddress($get_email);
     $mail->isHTML(true);
-    $mail->Subject="Resetare parola";
+    $mail->Subject="Cerere acceptata";
     $email_template="
       Cererea dumneavoastră a fost acceptată.
       Pentru a vă conecta, accesați următorul link: 
