@@ -23,7 +23,7 @@
             session_start();
             $query="SELECT nr_inmatriculare, oras, zona, data FROM payment WHERE username=?";
             $stmt=$connection->prepare($query);
-            $stmt->bind_param("s",$_SESSION['username']);
+            $stmt->bind_param("s",$_SESSION['email']);
             $stmt->execute();
             $result=$stmt->get_result();
             if($result-> num_rows > 0){
