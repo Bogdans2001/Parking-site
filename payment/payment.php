@@ -116,12 +116,12 @@ if(mysqli_num_rows($result)!=0){
        $stmt->close();}
        else{
          $stmt->close();
-         plateste($connection,$budget,$price,$bank_account,$card_number,$_SESSION['username'],$city,$zona,$inm_number);
+         plateste($connection,$budget,$price,$bank_account,$card_number,$_SESSION['email'],$city,$zona,$inm_number);
         }
   }
   
   else {
-    plateste($connection,$budget,$price,$bank_account,$card_number,$_SESSION['username'],$city,$zona,$inm_number);
+    plateste($connection,$budget,$price,$bank_account,$card_number,$_SESSION['email'],$city,$zona,$inm_number);
     echo $_SESSION['username'];
   }}
 }

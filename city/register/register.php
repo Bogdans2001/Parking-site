@@ -31,14 +31,14 @@ function send_password_reset($username,$email,$id){
     $mail->isSMTP();
     $mail->SMTPAuth=true;                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through                                //Enable SMTP authentication
-    $mail->Username   = 'stoinelb@gmail.com';                     //SMTP username
-    $mail->Password   = 'ldqjmhfkzepiprls';                               //SMTP password
+    $mail->Username   = 'parcaresite@gmail.com';                     //SMTP username
+    $mail->Password   = 'twoxhynmgpknmyqn';                               //SMTP password
     $mail->SMTPSecure = "tls";            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
     $get_email='stoinelb@gmail.com';
-    $mail->setFrom('stoinelb@gmail.com', $get_email);
+    $mail->setFrom('parcaresite@gmail.com', $get_email);
     $mail->addAddress($get_email);
     $mail->isHTML(true);
     $mail->Subject="Cerere de autentificare";
