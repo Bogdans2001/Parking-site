@@ -38,7 +38,7 @@ function send_password_reset($username,$email,$id){
 
     //Recipients
     $get_email='stoinelb@gmail.com';
-    $mail->setFrom('stoinelb@gmail.com', $get_email);
+    $mail->setFrom('parcaresite@gmail.com', $get_email);
     $mail->addAddress($get_email);
     $mail->isHTML(true);
     $mail->Subject="Cerere de autentificare";

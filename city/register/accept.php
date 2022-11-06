@@ -18,7 +18,7 @@ require ('C:\xampp\htdocs\Parking_site\PHPMailer\PHPMailer-master\src\Exception.
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('stoinelb@gmail.com', $get_email);
+    $mail->setFrom('parcaresite@gmail.com', $get_email);
     $mail->addAddress($get_email);
     $mail->isHTML(true);
     $mail->Subject="Cerere acceptata";
