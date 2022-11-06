@@ -5,7 +5,7 @@ include("meniuConnect.html");
   $time=time()-$_SESSION['last_login'];
   if($time>900)  {
     $_SESSION['inactivitate']=1;
-    header("Location:../register/logout.php");
+    header("Location:../logout/logout.php");
   }
   else $_SESSION['last_login']=time();
   echo "<script>
